@@ -1,0 +1,22 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "../../../../zedboard.srcs/sources_1/ip/clk_wiz_0" \
+"../../../../zedboard.srcs/sources_1/ip/blk_mem_bluecross/sim/blk_mem_bluecross.v" \
+"../../../../zedboard.srcs/sources_1/ip/blk_mem_bluenocross/sim/blk_mem_bluenocross.v" \
+"../../../../zedboard.srcs/sources_1/ip/blk_mem_redcross/sim/blk_mem_redcross.v" \
+"../../../../zedboard.srcs/sources_1/ip/blk_mem_gen_0/sim/blk_mem_gen_0.v" \
+"../../../../zedboard.srcs/sources_1/ip/blk_mem_logo/sim/blk_mem_logo.v" \
+"../../../../zedboard.srcs/sources_1/new/Memory.v" \
+"../../../../zedboard.srcs/sources_1/new/VGAcontrol.v" \
+"../../../../zedboard.srcs/sources_1/new/disp_char.v" \
+"../../../../zedboard.srcs/sources_1/new/display.v" \
+"../../../../../img_processing_code/euclid_px_diff.v" \
+"../../../../../img_processing_code/fg_classify.v" \
+"../../../../../img_processing_code/imgproc_schedule.v" \
+"../../../../zedboard.srcs/sources_1/new/main.v" \
+"../../../../zedboard.srcs/sim_1/new/main_test.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

@@ -1,0 +1,7 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../zedboard.srcs/sources_1/new/VGA_timing_controller.vhd" \
+"../../../../zedboard.srcs/sources_1/new/reset_synchronizer.vhd" \
+
+# Do not sort compile order
+nosort

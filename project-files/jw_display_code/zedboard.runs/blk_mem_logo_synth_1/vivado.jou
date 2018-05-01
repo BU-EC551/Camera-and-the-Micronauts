@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2018.1 (64-bit)
+# SW Build 2188600 on Wed Apr  4 18:40:38 MDT 2018
+# IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
+# Start of session at: Tue May  1 11:10:27 2018
+# Process ID: 11020
+# Current directory: C:/Users/jal02005/Documents/fixed_micro/Micronaut/jw_display_code/zedboard.runs/blk_mem_logo_synth_1
+# Command line: vivado.exe -log blk_mem_logo.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source blk_mem_logo.tcl
+# Log file: C:/Users/jal02005/Documents/fixed_micro/Micronaut/jw_display_code/zedboard.runs/blk_mem_logo_synth_1/blk_mem_logo.vds
+# Journal file: C:/Users/jal02005/Documents/fixed_micro/Micronaut/jw_display_code/zedboard.runs/blk_mem_logo_synth_1\vivado.jou
+#-----------------------------------------------------------
+source blk_mem_logo.tcl -notrace

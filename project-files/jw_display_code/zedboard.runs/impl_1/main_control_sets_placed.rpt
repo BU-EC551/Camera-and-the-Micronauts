@@ -1,0 +1,86 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.1 (win64) Build 2188600 Wed Apr  4 18:40:38 MDT 2018
+| Date         : Tue May  1 15:26:18 2018
+| Host         : DESKTOP-9C1N602 running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file main_control_sets_placed.rpt
+| Design       : main
+| Device       : xc7z020
+------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |    17 |
+| Unused register locations in slices containing registers |    87 |
++----------------------------------------------------------+-------+
+
+
+2. Histogram
+------------
+
++--------+--------------+
+| Fanout | Control Sets |
++--------+--------------+
+|      1 |            5 |
+|      3 |            1 |
+|     10 |            2 |
+|     12 |            1 |
+|     13 |            2 |
+|    16+ |            6 |
++--------+--------------+
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |             124 |           56 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |              65 |           21 |
+| Yes          | No                    | No                     |              61 |           31 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |              23 |            6 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++---------------------------------+----------------------------------+--------------------------------+------------------+----------------+
+|           Clock Signal          |           Enable Signal          |        Set/Reset Signal        | Slice Load Count | Bel Load Count |
++---------------------------------+----------------------------------+--------------------------------+------------------+----------------+
+| ~vga/frameSel15_out             |                                  | vga/frameSel15_out             |                1 |              1 |
+|  pixel_clk                      |                                  | vga/HS0                        |                1 |              1 |
+|  pixel_clk                      |                                  | vga/VS0                        |                1 |              1 |
+|  disp/textEn_reg/G0             |                                  |                                |                1 |              1 |
+|  disp/frameLeftEn_reg/G0        |                                  |                                |                1 |              1 |
+|  pixel_clk                      |                                  |                                |                2 |              3 |
+|  pixel_clk                      |                                  | vga/vcounter                   |                4 |             10 |
+|  pixel_clk                      | vga/vcounter                     | vga/vcounter[10]_i_1_n_0       |                2 |             10 |
+|  vga/frameLeftEn1               |                                  |                                |                8 |             12 |
+| ~vga/frameLeftEn1               |                                  |                                |                5 |             13 |
+|  GCLK_IBUF_BUFG                 | imgproc/writeAddress[12]_i_1_n_0 | imgproc/readAddress[0]_i_1_n_0 |                4 |             13 |
+|  vga/subtractedPixel_reg[127]_0 |                                  |                                |                6 |             20 |
+|  GCLK_IBUF_BUFG                 |                                  | disp/counter[26]_i_1_n_0       |                7 |             26 |
+|  GCLK_IBUF_BUFG                 |                                  | counter[26]_i_1__0_n_0         |                7 |             26 |
+|  GCLK_IBUF_BUFG                 | imgproc/writeAddress[12]_i_1_n_0 |                                |               22 |             29 |
+|  GCLK_IBUF_BUFG                 | counter[26]_i_1__0_n_0           |                                |                9 |             32 |
+|  GCLK_IBUF_BUFG                 |                                  |                                |               33 |             74 |
++---------------------------------+----------------------------------+--------------------------------+------------------+----------------+
+
+

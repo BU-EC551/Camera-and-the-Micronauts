@@ -1,0 +1,8 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/jal02005/Documents/fixed_micro/Micronaut/img_processing_code/euclid_px_diff.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module euclid_px_diff
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/jal02005/Documents/fixed_micro/Micronaut/img_processing_code/fg_classify.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module px_classify
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/jal02005/Documents/fixed_micro/Micronaut/img_processing_code/imgproc_schedule.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module imgproc_scheduled
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/jal02005/Documents/fixed_micro/Micronaut/img_processing_code/tb_imgproc.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_imgproc

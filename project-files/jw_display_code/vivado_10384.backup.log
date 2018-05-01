@@ -1,0 +1,1509 @@
+#-----------------------------------------------------------
+# Vivado v2018.1 (64-bit)
+# SW Build 2188600 on Wed Apr  4 18:40:38 MDT 2018
+# IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
+# Start of session at: Mon Apr 30 17:21:25 2018
+# Process ID: 10384
+# Current directory: C:/devspace/school/Micronaut/jw_display_code
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent28228 C:\devspace\school\Micronaut\jw_display_code\zedboard.xpr
+# Log file: C:/devspace/school/Micronaut/jw_display_code/vivado.log
+# Journal file: C:/devspace/school/Micronaut/jw_display_code\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/devspace/school/Micronaut/jw_display_code/zedboard.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.1/data/ip'.
+open_project: Time (s): cpu = 00:00:14 ; elapsed = 00:00:10 . Memory (MB): peak = 848.598 ; gain = 112.227
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Mon Apr 30 17:22:40 2018] Launched synth_1...
+Run output will be captured here: C:/devspace/school/Micronaut/jw_display_code/zedboard.runs/synth_1/runme.log
+[Mon Apr 30 17:22:40 2018] Launched impl_1...
+Run output will be captured here: C:/devspace/school/Micronaut/jw_display_code/zedboard.runs/impl_1/runme.log
+open_hw
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2018.1
+  **** Build date : Apr  4 2018-19:32:53
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210248470544
+open_hw_target: Time (s): cpu = 00:00:02 ; elapsed = 00:00:07 . Memory (MB): peak = 1488.141 ; gain = 634.035
+set_property PROGRAM.FILE {C:/devspace/school/Micronaut/jw_display_code/zedboard.runs/impl_1/main.bit} [get_hw_devices xc7z020_1]
+current_hw_device [get_hw_devices xc7z020_1]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7z020_1] 0]
+INFO: [Labtools 27-1435] Device xc7z020 (JTAG device index = 1) is not programmed (DONE status = 0).
+set_property PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {C:/devspace/school/Micronaut/jw_display_code/zedboard.runs/impl_1/main.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+INFO: [Labtools 27-1434] Device xc7z020 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+launch_simulation
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/devspace/school/Micronaut/jw_display_code/zedboard.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2018.1/data/xsim/ip/xsim_ip.ini' copied to run dir:'C:/devspace/school/Micronaut/jw_display_code/zedboard.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'display_test' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/devspace/school/Micronaut/jw_display_code/zedboard.sim/sim_1/behav/xsim/blk_mem_gen_0.mif'
+INFO: [SIM-utils-43] Exported 'C:/devspace/school/Micronaut/jw_display_code/zedboard.sim/sim_1/behav/xsim/background.coe'
+INFO: [SIM-utils-43] Exported 'C:/devspace/school/Micronaut/jw_display_code/zedboard.sim/sim_1/behav/xsim/blk_mem_gen_1.mif'
+INFO: [SIM-utils-43] Exported 'C:/devspace/school/Micronaut/jw_display_code/zedboard.sim/sim_1/behav/xsim/bluenocrossing.coe'
+INFO: [SIM-utils-43] Exported 'C:/devspace/school/Micronaut/jw_display_code/zedboard.sim/sim_1/behav/xsim/blk_mem_logo.mif'
+INFO: [SIM-utils-43] Exported 'C:/devspace/school/Micronaut/jw_display_code/zedboard.sim/sim_1/behav/xsim/cidarlogo.coe'
+INFO: [SIM-utils-43] Exported 'C:/devspace/school/Micronaut/jw_display_code/zedboard.sim/sim_1/behav/xsim/redcrossing.coe'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/devspace/school/Micronaut/jw_display_code/zedboard.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj display_test_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/disp_char.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module disp_char
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module display
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sim_1/new/display_test.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module display_test
+INFO: [USF-XSim-69] 'compile' step finished in '4' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/devspace/school/Micronaut/jw_display_code/zedboard.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.1
+Copyright 1986-1999, 2001-2017 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.1/bin/unwrapped/win64.o/xelab.exe -wto 617a0dd54e954085815eba52c3288dc9 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot display_test_behav xil_defaultlib.display_test xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-278] actual bit length 4 differs from formal bit length 3 for port frameSel [C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sim_1/new/display_test.v:52]
+WARNING: [VRFC 10-278] actual bit length 5 differs from formal bit length 6 for port char_row [C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v:72]
+WARNING: [VRFC 10-278] actual bit length 5 differs from formal bit length 6 for port char_col [C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v:73]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.disp_char
+Compiling module xil_defaultlib.display
+Compiling module xil_defaultlib.display_test
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot display_test_behav
+
+****** Webtalk v2018.1 (64-bit)
+  **** SW Build 2188600 on Wed Apr  4 18:40:38 MDT 2018
+  **** IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source C:/devspace/school/Micronaut/jw_display_code/zedboard.sim/sim_1/behav/xsim/xsim.dir/display_test_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Mon Apr 30 17:28:36 2018...
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:11 . Memory (MB): peak = 1581.918 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '12' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/devspace/school/Micronaut/jw_display_code/zedboard.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "display_test_behav -key {Behavioral:sim_1:Functional:display_test} -tclbatch {display_test.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.1
+Time resolution is 1 ps
+source display_test.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+WARNING: File char.list referenced on C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/disp_char.v at line 64 cannot be opened for reading. Please ensure that this file is available in the current working directory.
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'display_test_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:06 ; elapsed = 00:00:23 . Memory (MB): peak = 1606.133 ; gain = 24.215
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210248470544
+add_bp {C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v} 90
+add_bp {C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v} 91
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+close_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 1614.398 ; gain = 0.801
+launch_simulation
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/devspace/school/Micronaut/jw_display_code/zedboard.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2018.1/data/xsim/ip/xsim_ip.ini' copied to run dir:'C:/devspace/school/Micronaut/jw_display_code/zedboard.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'display_test' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/devspace/school/Micronaut/jw_display_code/zedboard.sim/sim_1/behav/xsim/blk_mem_gen_0.mif'
+INFO: [SIM-utils-43] Exported 'C:/devspace/school/Micronaut/jw_display_code/zedboard.sim/sim_1/behav/xsim/background.coe'
+INFO: [SIM-utils-43] Exported 'C:/devspace/school/Micronaut/jw_display_code/zedboard.sim/sim_1/behav/xsim/blk_mem_gen_1.mif'
+INFO: [SIM-utils-43] Exported 'C:/devspace/school/Micronaut/jw_display_code/zedboard.sim/sim_1/behav/xsim/bluenocrossing.coe'
+INFO: [SIM-utils-43] Exported 'C:/devspace/school/Micronaut/jw_display_code/zedboard.sim/sim_1/behav/xsim/blk_mem_logo.mif'
+INFO: [SIM-utils-43] Exported 'C:/devspace/school/Micronaut/jw_display_code/zedboard.sim/sim_1/behav/xsim/cidarlogo.coe'
+INFO: [SIM-utils-43] Exported 'C:/devspace/school/Micronaut/jw_display_code/zedboard.sim/sim_1/behav/xsim/redcrossing.coe'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/devspace/school/Micronaut/jw_display_code/zedboard.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj display_test_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/devspace/school/Micronaut/jw_display_code/zedboard.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.1
+Copyright 1986-1999, 2001-2017 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.1/bin/unwrapped/win64.o/xelab.exe -wto 617a0dd54e954085815eba52c3288dc9 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot display_test_behav xil_defaultlib.display_test xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-278] actual bit length 4 differs from formal bit length 3 for port frameSel [C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sim_1/new/display_test.v:52]
+WARNING: [VRFC 10-278] actual bit length 5 differs from formal bit length 6 for port char_row [C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v:72]
+WARNING: [VRFC 10-278] actual bit length 5 differs from formal bit length 6 for port char_col [C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v:73]
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '4' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/devspace/school/Micronaut/jw_display_code/zedboard.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "display_test_behav -key {Behavioral:sim_1:Functional:display_test} -tclbatch {display_test.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.1
+Time resolution is 1 ps
+source display_test.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+WARNING: File char.list referenced on C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/disp_char.v at line 64 cannot be opened for reading. Please ensure that this file is available in the current working directory.
+Stopped at time : 110 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 90
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'display_test_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:12 . Memory (MB): peak = 1614.398 ; gain = 0.000
+run all
+Stopped at time : 110 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 91
+run all
+Stopped at time : 112 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 90
+remove_bps -file {C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v} -line 91
+run all
+Stopped at time : 114 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 90
+run all
+Stopped at time : 116 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 90
+run all
+Stopped at time : 118 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 90
+run all
+Stopped at time : 120 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 90
+run all
+Stopped at time : 122 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 90
+run all
+Stopped at time : 124 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 90
+run all
+Stopped at time : 126 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 90
+run all
+Stopped at time : 128 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 90
+run all
+Stopped at time : 130 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 90
+run all
+Stopped at time : 132 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 90
+run all
+Stopped at time : 134 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 90
+run all
+Stopped at time : 136 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 90
+run all
+Stopped at time : 138 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 90
+run all
+Stopped at time : 140 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 90
+run all
+Stopped at time : 142 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 90
+run all
+Stopped at time : 144 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 90
+relaunch_sim
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/devspace/school/Micronaut/jw_display_code/zedboard.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2018.1/data/xsim/ip/xsim_ip.ini' copied to run dir:'C:/devspace/school/Micronaut/jw_display_code/zedboard.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'display_test' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/devspace/school/Micronaut/jw_display_code/zedboard.sim/sim_1/behav/xsim/blk_mem_gen_0.mif'
+INFO: [SIM-utils-43] Exported 'C:/devspace/school/Micronaut/jw_display_code/zedboard.sim/sim_1/behav/xsim/background.coe'
+INFO: [SIM-utils-43] Exported 'C:/devspace/school/Micronaut/jw_display_code/zedboard.sim/sim_1/behav/xsim/blk_mem_gen_1.mif'
+INFO: [SIM-utils-43] Exported 'C:/devspace/school/Micronaut/jw_display_code/zedboard.sim/sim_1/behav/xsim/bluenocrossing.coe'
+INFO: [SIM-utils-43] Exported 'C:/devspace/school/Micronaut/jw_display_code/zedboard.sim/sim_1/behav/xsim/blk_mem_logo.mif'
+INFO: [SIM-utils-43] Exported 'C:/devspace/school/Micronaut/jw_display_code/zedboard.sim/sim_1/behav/xsim/cidarlogo.coe'
+INFO: [SIM-utils-43] Exported 'C:/devspace/school/Micronaut/jw_display_code/zedboard.sim/sim_1/behav/xsim/redcrossing.coe'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/devspace/school/Micronaut/jw_display_code/zedboard.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj display_test_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/devspace/school/Micronaut/jw_display_code/zedboard.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/devspace/school/Micronaut/jw_display_code/zedboard.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.1
+Copyright 1986-1999, 2001-2017 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.1/bin/unwrapped/win64.o/xelab.exe -wto 617a0dd54e954085815eba52c3288dc9 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot display_test_behav xil_defaultlib.display_test xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-278] actual bit length 4 differs from formal bit length 3 for port frameSel [C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sim_1/new/display_test.v:52]
+WARNING: [VRFC 10-278] actual bit length 5 differs from formal bit length 6 for port char_row [C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v:72]
+WARNING: [VRFC 10-278] actual bit length 5 differs from formal bit length 6 for port char_col [C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v:73]
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '4' seconds
+Vivado Simulator 2018.1
+Time resolution is 1 ps
+WARNING: File char.list referenced on C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/disp_char.v at line 64 cannot be opened for reading. Please ensure that this file is available in the current working directory.
+Stopped at time : 110 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 90
+relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:12 . Memory (MB): peak = 1616.191 ; gain = 0.000
+run all
+Stopped at time : 112 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 90
+run all
+Stopped at time : 114 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 90
+run all
+Stopped at time : 116 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 90
+run all
+Stopped at time : 118 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 90
+run all
+Stopped at time : 120 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 90
+run all
+Stopped at time : 122 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 90
+run all
+Stopped at time : 124 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 90
+run all
+Stopped at time : 126 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 90
+run all
+Stopped at time : 128 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 90
+run all
+Stopped at time : 130 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 90
+run all
+Stopped at time : 132 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 90
+run all
+Stopped at time : 134 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 90
+run all
+Stopped at time : 136 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 90
+run all
+Stopped at time : 138 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 90
+run all
+Stopped at time : 140 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 90
+run all
+Stopped at time : 142 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 90
+relaunch_sim
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/devspace/school/Micronaut/jw_display_code/zedboard.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2018.1/data/xsim/ip/xsim_ip.ini' copied to run dir:'C:/devspace/school/Micronaut/jw_display_code/zedboard.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'display_test' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/devspace/school/Micronaut/jw_display_code/zedboard.sim/sim_1/behav/xsim/blk_mem_gen_0.mif'
+INFO: [SIM-utils-43] Exported 'C:/devspace/school/Micronaut/jw_display_code/zedboard.sim/sim_1/behav/xsim/background.coe'
+INFO: [SIM-utils-43] Exported 'C:/devspace/school/Micronaut/jw_display_code/zedboard.sim/sim_1/behav/xsim/blk_mem_gen_1.mif'
+INFO: [SIM-utils-43] Exported 'C:/devspace/school/Micronaut/jw_display_code/zedboard.sim/sim_1/behav/xsim/bluenocrossing.coe'
+INFO: [SIM-utils-43] Exported 'C:/devspace/school/Micronaut/jw_display_code/zedboard.sim/sim_1/behav/xsim/blk_mem_logo.mif'
+INFO: [SIM-utils-43] Exported 'C:/devspace/school/Micronaut/jw_display_code/zedboard.sim/sim_1/behav/xsim/cidarlogo.coe'
+INFO: [SIM-utils-43] Exported 'C:/devspace/school/Micronaut/jw_display_code/zedboard.sim/sim_1/behav/xsim/redcrossing.coe'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/devspace/school/Micronaut/jw_display_code/zedboard.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj display_test_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/disp_char.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module disp_char
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module display
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sim_1/new/display_test.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module display_test
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/devspace/school/Micronaut/jw_display_code/zedboard.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/devspace/school/Micronaut/jw_display_code/zedboard.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.1
+Copyright 1986-1999, 2001-2017 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.1/bin/unwrapped/win64.o/xelab.exe -wto 617a0dd54e954085815eba52c3288dc9 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot display_test_behav xil_defaultlib.display_test xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-278] actual bit length 4 differs from formal bit length 3 for port frameSel [C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sim_1/new/display_test.v:52]
+WARNING: [VRFC 10-278] actual bit length 5 differs from formal bit length 6 for port char_row [C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v:72]
+WARNING: [VRFC 10-278] actual bit length 5 differs from formal bit length 6 for port char_col [C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v:73]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.disp_char
+Compiling module xil_defaultlib.display
+Compiling module xil_defaultlib.display_test
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot display_test_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '5' seconds
+launch_simulation: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 1618.750 ; gain = 0.000
+Vivado Simulator 2018.1
+Time resolution is 1 ps
+WARNING: File char.list referenced on C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/disp_char.v at line 64 cannot be opened for reading. Please ensure that this file is available in the current working directory.
+Stopped at time : 110 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 90
+relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:13 . Memory (MB): peak = 1619.535 ; gain = 0.855
+run all
+Stopped at time : 112 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 90
+run all
+Stopped at time : 114 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 90
+run all
+Stopped at time : 116 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 90
+run all
+Stopped at time : 118 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 90
+run all
+Stopped at time : 120 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 90
+run all
+Stopped at time : 122 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 90
+run all
+Stopped at time : 124 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 90
+run all
+Stopped at time : 126 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 90
+run all
+Stopped at time : 128 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 90
+run all
+Stopped at time : 130 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 90
+run all
+Stopped at time : 132 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 90
+run all
+Stopped at time : 134 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 90
+run all
+Stopped at time : 136 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 90
+run all
+Stopped at time : 138 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 90
+run all
+Stopped at time : 140 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 90
+run all
+Stopped at time : 142 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 90
+run all
+Stopped at time : 144 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 90
+run all
+Stopped at time : 146 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 90
+run all
+Stopped at time : 148 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 90
+run all
+Stopped at time : 150 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 90
+run all
+Stopped at time : 152 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 90
+run all
+Stopped at time : 154 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 90
+run all
+Stopped at time : 156 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 90
+run all
+Stopped at time : 158 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 90
+run all
+Stopped at time : 160 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 90
+run all
+Stopped at time : 162 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 90
+run all
+Stopped at time : 164 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 90
+add_bp {C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v} 106
+add_bp {C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v} 108
+run all
+Stopped at time : 166 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 90
+run all
+Stopped at time : 168 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 90
+run all
+Stopped at time : 170 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 90
+run all
+Stopped at time : 172 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 90
+run all
+Stopped at time : 174 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 90
+run all
+Stopped at time : 176 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 90
+run all
+Stopped at time : 178 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 90
+run all
+Stopped at time : 180 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 90
+run all
+Stopped at time : 182 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 90
+run all
+Stopped at time : 184 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 90
+run all
+Stopped at time : 186 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 90
+run all
+Stopped at time : 188 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 90
+relaunch_sim
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/devspace/school/Micronaut/jw_display_code/zedboard.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2018.1/data/xsim/ip/xsim_ip.ini' copied to run dir:'C:/devspace/school/Micronaut/jw_display_code/zedboard.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'display_test' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/devspace/school/Micronaut/jw_display_code/zedboard.sim/sim_1/behav/xsim/blk_mem_gen_0.mif'
+INFO: [SIM-utils-43] Exported 'C:/devspace/school/Micronaut/jw_display_code/zedboard.sim/sim_1/behav/xsim/background.coe'
+INFO: [SIM-utils-43] Exported 'C:/devspace/school/Micronaut/jw_display_code/zedboard.sim/sim_1/behav/xsim/blk_mem_gen_1.mif'
+INFO: [SIM-utils-43] Exported 'C:/devspace/school/Micronaut/jw_display_code/zedboard.sim/sim_1/behav/xsim/bluenocrossing.coe'
+INFO: [SIM-utils-43] Exported 'C:/devspace/school/Micronaut/jw_display_code/zedboard.sim/sim_1/behav/xsim/blk_mem_logo.mif'
+INFO: [SIM-utils-43] Exported 'C:/devspace/school/Micronaut/jw_display_code/zedboard.sim/sim_1/behav/xsim/cidarlogo.coe'
+INFO: [SIM-utils-43] Exported 'C:/devspace/school/Micronaut/jw_display_code/zedboard.sim/sim_1/behav/xsim/redcrossing.coe'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/devspace/school/Micronaut/jw_display_code/zedboard.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj display_test_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/disp_char.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module disp_char
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module display
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sim_1/new/display_test.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module display_test
+INFO: [USF-XSim-69] 'compile' step finished in '4' seconds
+launch_simulation: Time (s): cpu = 00:00:00 ; elapsed = 00:00:07 . Memory (MB): peak = 1626.406 ; gain = 0.000
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/devspace/school/Micronaut/jw_display_code/zedboard.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/devspace/school/Micronaut/jw_display_code/zedboard.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.1
+Copyright 1986-1999, 2001-2017 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.1/bin/unwrapped/win64.o/xelab.exe -wto 617a0dd54e954085815eba52c3288dc9 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot display_test_behav xil_defaultlib.display_test xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-278] actual bit length 4 differs from formal bit length 3 for port frameSel [C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sim_1/new/display_test.v:52]
+WARNING: [VRFC 10-278] actual bit length 5 differs from formal bit length 6 for port char_row [C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v:72]
+WARNING: [VRFC 10-278] actual bit length 5 differs from formal bit length 6 for port char_col [C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v:73]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.disp_char
+Compiling module xil_defaultlib.display
+Compiling module xil_defaultlib.display_test
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot display_test_behav
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:05 . Memory (MB): peak = 1626.406 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '5' seconds
+launch_simulation: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 1626.406 ; gain = 0.000
+Vivado Simulator 2018.1
+Time resolution is 1 ps
+WARNING: File char.list referenced on C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/disp_char.v at line 64 cannot be opened for reading. Please ensure that this file is available in the current working directory.
+Stopped at time : 110 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 90
+relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:16 . Memory (MB): peak = 1626.406 ; gain = 0.000
+add_bp {C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v} 89
+remove_bps -file {C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v} -line 89
+remove_bps -file {C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v} -line 106
+remove_bps -file {C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v} -line 108
+run all
+Stopped at time : 112 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 90
+run all
+Stopped at time : 114 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 90
+run all
+Stopped at time : 116 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 90
+run all
+Stopped at time : 118 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 90
+run all
+Stopped at time : 120 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 90
+run all
+Stopped at time : 122 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 90
+run all
+Stopped at time : 124 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 90
+run all
+Stopped at time : 126 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 90
+run all
+Stopped at time : 128 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 90
+run all
+Stopped at time : 130 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 90
+run all
+Stopped at time : 132 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 90
+run all
+Stopped at time : 134 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 90
+run all
+Stopped at time : 136 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 90
+run all
+Stopped at time : 138 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 90
+add_bp {C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v} 89
+add_bp {C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v} 84
+run all
+Stopped at time : 140 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 84
+run all
+Stopped at time : 140 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 89
+run all
+Stopped at time : 140 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 90
+run all
+Stopped at time : 142 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 84
+run all
+Stopped at time : 142 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 89
+run all
+Stopped at time : 142 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 90
+run all
+Stopped at time : 144 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 84
+run all
+Stopped at time : 144 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 89
+run all
+Stopped at time : 144 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 90
+run all
+Stopped at time : 146 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 84
+run all
+Stopped at time : 146 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 89
+run all
+Stopped at time : 146 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 90
+add_bp {C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v} 92
+remove_bps -file {C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v} -line 92
+add_bp {C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v} 91
+run all
+Stopped at time : 146 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 91
+run all
+Stopped at time : 148 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 84
+run all
+Stopped at time : 148 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 89
+run all
+Stopped at time : 148 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 90
+run all
+Stopped at time : 148 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 91
+add_bp {C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v} 92
+remove_bps -file {C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v} -line 92
+add_bp {C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v} 92
+run all
+Stopped at time : 148 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 92
+run all
+Stopped at time : 150 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 84
+run all
+Stopped at time : 150 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 89
+run all
+Stopped at time : 150 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 90
+run all
+Stopped at time : 150 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 91
+run all
+Stopped at time : 150 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 92
+run all
+Stopped at time : 152 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 84
+run all
+Stopped at time : 152 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 89
+run all
+Stopped at time : 152 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 90
+add_bp {C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v} 96
+remove_bps -file {C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v} -line 96
+add_bp {C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v} 96
+run all
+Stopped at time : 152 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 91
+run all
+Stopped at time : 152 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 92
+run all
+Stopped at time : 154 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 84
+run all
+Stopped at time : 154 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 89
+run all
+Stopped at time : 154 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 90
+run all
+Stopped at time : 154 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 91
+run all
+Stopped at time : 154 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 92
+run all
+Stopped at time : 156 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 84
+relaunch_sim
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/devspace/school/Micronaut/jw_display_code/zedboard.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2018.1/data/xsim/ip/xsim_ip.ini' copied to run dir:'C:/devspace/school/Micronaut/jw_display_code/zedboard.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'display_test' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/devspace/school/Micronaut/jw_display_code/zedboard.sim/sim_1/behav/xsim/blk_mem_gen_0.mif'
+INFO: [SIM-utils-43] Exported 'C:/devspace/school/Micronaut/jw_display_code/zedboard.sim/sim_1/behav/xsim/background.coe'
+INFO: [SIM-utils-43] Exported 'C:/devspace/school/Micronaut/jw_display_code/zedboard.sim/sim_1/behav/xsim/blk_mem_gen_1.mif'
+INFO: [SIM-utils-43] Exported 'C:/devspace/school/Micronaut/jw_display_code/zedboard.sim/sim_1/behav/xsim/bluenocrossing.coe'
+INFO: [SIM-utils-43] Exported 'C:/devspace/school/Micronaut/jw_display_code/zedboard.sim/sim_1/behav/xsim/blk_mem_logo.mif'
+INFO: [SIM-utils-43] Exported 'C:/devspace/school/Micronaut/jw_display_code/zedboard.sim/sim_1/behav/xsim/cidarlogo.coe'
+INFO: [SIM-utils-43] Exported 'C:/devspace/school/Micronaut/jw_display_code/zedboard.sim/sim_1/behav/xsim/redcrossing.coe'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/devspace/school/Micronaut/jw_display_code/zedboard.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj display_test_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/disp_char.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module disp_char
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module display
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sim_1/new/display_test.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module display_test
+INFO: [USF-XSim-69] 'compile' step finished in '4' seconds
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/devspace/school/Micronaut/jw_display_code/zedboard.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/devspace/school/Micronaut/jw_display_code/zedboard.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.1
+Copyright 1986-1999, 2001-2017 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.1/bin/unwrapped/win64.o/xelab.exe -wto 617a0dd54e954085815eba52c3288dc9 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot display_test_behav xil_defaultlib.display_test xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-278] actual bit length 4 differs from formal bit length 3 for port frameSel [C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sim_1/new/display_test.v:52]
+WARNING: [VRFC 10-278] actual bit length 5 differs from formal bit length 6 for port char_row [C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v:72]
+WARNING: [VRFC 10-278] actual bit length 5 differs from formal bit length 6 for port char_col [C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v:73]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.disp_char
+Compiling module xil_defaultlib.display
+Compiling module xil_defaultlib.display_test
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot display_test_behav
+run_program: Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 1633.098 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '6' seconds
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 1633.098 ; gain = 0.000
+Vivado Simulator 2018.1
+Time resolution is 1 ps
+WARNING: [Simulator 45-24] Previous breakpoint at line 89 in file 'C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v' not restored because it is no longer a breakable line.
+WARNING: File char.list referenced on C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/disp_char.v at line 64 cannot be opened for reading. Please ensure that this file is available in the current working directory.
+Stopped at time : 0 fs : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 96
+relaunch_sim: Time (s): cpu = 00:00:02 ; elapsed = 00:00:14 . Memory (MB): peak = 1633.098 ; gain = 0.000
+remove_bps -file {C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v} -line 84
+remove_bps -file {C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v} -line 90
+remove_bps -file {C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v} -line 91
+remove_bps -file {C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v} -line 96
+add_bp {C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v} 93
+run all
+Stopped at time : 110 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 92
+run all
+Stopped at time : 110 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 93
+run all
+Stopped at time : 112 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 92
+run all
+Stopped at time : 112 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 93
+run all
+Stopped at time : 114 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 92
+run all
+Stopped at time : 114 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 93
+run all
+Stopped at time : 116 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 92
+run all
+Stopped at time : 116 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 93
+run all
+Stopped at time : 118 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 92
+run all
+Stopped at time : 118 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 93
+remove_bps -file {C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v} -line 92
+run all
+Stopped at time : 120 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 93
+run all
+Stopped at time : 122 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 93
+run all
+Stopped at time : 124 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 93
+run all
+Stopped at time : 126 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 93
+run all
+Stopped at time : 128 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 93
+run all
+Stopped at time : 130 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 93
+run all
+Stopped at time : 132 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 93
+run all
+Stopped at time : 134 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 93
+run all
+Stopped at time : 136 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 93
+run all
+Stopped at time : 138 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 93
+run all
+Stopped at time : 140 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 93
+run all
+Stopped at time : 142 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 93
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/devspace/school/Micronaut/jw_display_code/zedboard.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Mon Apr 30 17:40:00 2018] Launched synth_1...
+Run output will be captured here: C:/devspace/school/Micronaut/jw_display_code/zedboard.runs/synth_1/runme.log
+[Mon Apr 30 17:40:00 2018] Launched impl_1...
+Run output will be captured here: C:/devspace/school/Micronaut/jw_display_code/zedboard.runs/impl_1/runme.log
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210248470544
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+INFO: [Labtools 27-1434] Device xc7z020 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210248470544
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210248470544
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+INFO: [Labtools 27-1434] Device xc7z020 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210248470544
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210248470544
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+INFO: [Labtools 27-1434] Device xc7z020 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210248470544
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210248470544
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+INFO: [Labtools 27-1434] Device xc7z020 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+set_property PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {C:/devspace/school/Micronaut/jw_display_code/zedboard.runs/impl_1/main.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+INFO: [Labtools 27-1434] Device xc7z020 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/devspace/school/Micronaut/jw_display_code/zedboard.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Mon Apr 30 17:47:37 2018] Launched synth_1...
+Run output will be captured here: C:/devspace/school/Micronaut/jw_display_code/zedboard.runs/synth_1/runme.log
+[Mon Apr 30 17:47:37 2018] Launched impl_1...
+Run output will be captured here: C:/devspace/school/Micronaut/jw_display_code/zedboard.runs/impl_1/runme.log
+close_hw
+open_hw
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2018.1
+  **** Build date : Apr  4 2018-19:32:53
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210248470544
+set_property PROGRAM.FILE {C:/devspace/school/Micronaut/jw_display_code/zedboard.runs/impl_1/main.bit} [get_hw_devices xc7z020_1]
+current_hw_device [get_hw_devices xc7z020_1]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7z020_1] 0]
+INFO: [Labtools 27-1434] Device xc7z020 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+set_property PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {C:/devspace/school/Micronaut/jw_display_code/zedboard.runs/impl_1/main.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+INFO: [Labtools 27-1434] Device xc7z020 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+run 155 ns
+Stopped at time : 144 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 93
+remove_bps -file {C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v} -line 93
+run 155 ns
+run 155 ns
+run 155 ns
+run 155 ns
+add_bp {C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v} 93
+run all
+Stopped at time : 1400 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 93
+run all
+Stopped at time : 1402 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 93
+add_bp {C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v} 97
+run all
+Stopped at time : 1404 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 93
+run all
+Stopped at time : 1406 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 93
+run all
+Stopped at time : 1408 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 93
+add_bp {C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v} 96
+run all
+Stopped at time : 1410 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 93
+run all
+Stopped at time : 1412 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 93
+run all
+Stopped at time : 1414 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 93
+run all
+Stopped at time : 1416 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 93
+run all
+Stopped at time : 1418 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 93
+run all
+Stopped at time : 1420 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 93
+run all
+Stopped at time : 1422 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 93
+run all
+Stopped at time : 1424 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 93
+run all
+Stopped at time : 1426 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 93
+add_bp {C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v} 94
+run all
+Stopped at time : 1426 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 94
+run all
+Stopped at time : 1428 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 93
+run all
+Stopped at time : 1428 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 94
+run all
+Stopped at time : 1430 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 93
+run all
+Stopped at time : 1430 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 94
+relaunch_sim
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/devspace/school/Micronaut/jw_display_code/zedboard.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2018.1/data/xsim/ip/xsim_ip.ini' copied to run dir:'C:/devspace/school/Micronaut/jw_display_code/zedboard.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'display_test' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/devspace/school/Micronaut/jw_display_code/zedboard.sim/sim_1/behav/xsim/blk_mem_gen_0.mif'
+INFO: [SIM-utils-43] Exported 'C:/devspace/school/Micronaut/jw_display_code/zedboard.sim/sim_1/behav/xsim/background.coe'
+INFO: [SIM-utils-43] Exported 'C:/devspace/school/Micronaut/jw_display_code/zedboard.sim/sim_1/behav/xsim/blk_mem_gen_1.mif'
+INFO: [SIM-utils-43] Exported 'C:/devspace/school/Micronaut/jw_display_code/zedboard.sim/sim_1/behav/xsim/bluenocrossing.coe'
+INFO: [SIM-utils-43] Exported 'C:/devspace/school/Micronaut/jw_display_code/zedboard.sim/sim_1/behav/xsim/blk_mem_logo.mif'
+INFO: [SIM-utils-43] Exported 'C:/devspace/school/Micronaut/jw_display_code/zedboard.sim/sim_1/behav/xsim/cidarlogo.coe'
+INFO: [SIM-utils-43] Exported 'C:/devspace/school/Micronaut/jw_display_code/zedboard.sim/sim_1/behav/xsim/redcrossing.coe'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/devspace/school/Micronaut/jw_display_code/zedboard.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj display_test_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/disp_char.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module disp_char
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module display
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sim_1/new/display_test.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module display_test
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/devspace/school/Micronaut/jw_display_code/zedboard.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/devspace/school/Micronaut/jw_display_code/zedboard.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.1
+Copyright 1986-1999, 2001-2017 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.1/bin/unwrapped/win64.o/xelab.exe -wto 617a0dd54e954085815eba52c3288dc9 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot display_test_behav xil_defaultlib.display_test xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-278] actual bit length 4 differs from formal bit length 3 for port frameSel [C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sim_1/new/display_test.v:52]
+WARNING: [VRFC 10-278] actual bit length 5 differs from formal bit length 6 for port char_row [C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v:72]
+WARNING: [VRFC 10-278] actual bit length 5 differs from formal bit length 6 for port char_col [C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v:73]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.disp_char
+Compiling module xil_defaultlib.display
+Compiling module xil_defaultlib.display_test
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot display_test_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '4' seconds
+launch_simulation: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 1786.148 ; gain = 0.000
+Vivado Simulator 2018.1
+Time resolution is 1 ps
+WARNING: [Simulator 45-24] Previous breakpoint at line 97 in file 'C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v' not restored because it is no longer a breakable line.
+ERROR: [Labtools 27-1832] create_wave_config not a supported tcl command in labtools hardware mode. Default wave configurations are automatically created when triggering an ILA core.
+relaunch_sim: Time (s): cpu = 00:00:00 ; elapsed = 00:00:13 . Memory (MB): peak = 1786.148 ; gain = 0.000
+add_bp {C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v} 95
+run all
+WARNING: File char.list referenced on C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/disp_char.v at line 64 cannot be opened for reading. Please ensure that this file is available in the current working directory.
+Stopped at time : 110 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 93
+run all
+Stopped at time : 110 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 94
+run all
+Stopped at time : 110 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 95
+run all
+Stopped at time : 110 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 96
+run all
+Stopped at time : 112 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 93
+run all
+Stopped at time : 112 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 94
+run all
+Stopped at time : 112 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 95
+run all
+Stopped at time : 112 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 96
+run all
+Stopped at time : 114 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 93
+run all
+Stopped at time : 114 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 94
+run all
+Stopped at time : 114 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 95
+run all
+Stopped at time : 114 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 96
+run all
+Stopped at time : 116 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 93
+run all
+Stopped at time : 116 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 94
+run all
+Stopped at time : 116 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 95
+run all
+Stopped at time : 116 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 96
+run all
+Stopped at time : 118 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 93
+run all
+Stopped at time : 118 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 94
+run all
+Stopped at time : 118 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 95
+run all
+Stopped at time : 118 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 96
+run all
+Stopped at time : 120 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 93
+run all
+Stopped at time : 120 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 94
+run all
+Stopped at time : 120 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 95
+run all
+Stopped at time : 120 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 96
+run all
+Stopped at time : 122 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 93
+run all
+Stopped at time : 122 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 94
+run all
+Stopped at time : 122 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 95
+run all
+Stopped at time : 122 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 96
+run all
+Stopped at time : 124 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 93
+run all
+Stopped at time : 124 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 94
+run all
+Stopped at time : 124 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 95
+run all
+Stopped at time : 124 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 96
+run all
+Stopped at time : 126 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 93
+run all
+Stopped at time : 126 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 94
+run all
+Stopped at time : 126 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 95
+run all
+Stopped at time : 126 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 96
+run all
+Stopped at time : 128 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 93
+run all
+Stopped at time : 128 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 94
+run all
+Stopped at time : 128 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 95
+run all
+Stopped at time : 128 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 96
+run all
+Stopped at time : 130 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 93
+run all
+Stopped at time : 130 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 94
+run all
+Stopped at time : 130 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 95
+run all
+Stopped at time : 130 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 96
+run all
+Stopped at time : 132 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 93
+run all
+Stopped at time : 132 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 94
+run all
+Stopped at time : 132 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 95
+run all
+Stopped at time : 132 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 96
+run all
+Stopped at time : 134 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 93
+run all
+Stopped at time : 134 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 94
+run all
+Stopped at time : 134 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 95
+run all
+Stopped at time : 134 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 96
+run all
+Stopped at time : 136 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 93
+run all
+Stopped at time : 136 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 94
+run all
+Stopped at time : 136 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 95
+add_bp {C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v} 175
+add_bp {C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v} 174
+add_bp {C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v} 173
+run all
+Stopped at time : 136 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 96
+run all
+Stopped at time : 136 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 175
+run all
+Stopped at time : 136 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 174
+run all
+Stopped at time : 138 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 93
+run all
+Stopped at time : 138 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 94
+run all
+Stopped at time : 138 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 95
+run all
+Stopped at time : 138 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 96
+run all
+Stopped at time : 138 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 175
+run all
+Stopped at time : 138 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 174
+run all
+Stopped at time : 138 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 173
+run all
+Stopped at time : 140 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 93
+run all
+Stopped at time : 140 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 94
+run all
+Stopped at time : 140 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 95
+run all
+Stopped at time : 140 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 96
+run all
+Stopped at time : 140 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 175
+run all
+Stopped at time : 140 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 174
+run all
+Stopped at time : 142 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 93
+run all
+Stopped at time : 142 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 94
+run all
+Stopped at time : 142 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 95
+remove_bps -file {C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v} -line 96
+remove_bps -file {C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v} -line 95
+remove_bps -file {C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v} -line 94
+remove_bps -file {C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v} -line 93
+run all
+Stopped at time : 142 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 175
+run all
+Stopped at time : 142 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 174
+remove_bps -file {C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v} -line 174
+remove_bps -file {C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v} -line 173
+run all
+Stopped at time : 144 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 175
+run all
+Stopped at time : 146 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 175
+run all
+Stopped at time : 148 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 175
+run all
+Stopped at time : 150 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 175
+run all
+Stopped at time : 152 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 175
+run all
+Stopped at time : 154 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 175
+run all
+Stopped at time : 156 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 175
+run all
+Stopped at time : 158 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 175
+run all
+Stopped at time : 160 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 175
+run all
+Stopped at time : 162 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 175
+run all
+Stopped at time : 164 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 175
+run all
+Stopped at time : 166 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 175
+run all
+Stopped at time : 168 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 175
+run all
+Stopped at time : 170 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 175
+run all
+Stopped at time : 172 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 175
+run all
+Stopped at time : 174 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 175
+run all
+Stopped at time : 176 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 175
+run all
+Stopped at time : 178 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 175
+run all
+Stopped at time : 180 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 175
+run all
+Stopped at time : 182 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 175
+run all
+Stopped at time : 184 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 175
+run all
+Stopped at time : 186 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 175
+run all
+Stopped at time : 188 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 175
+run all
+Stopped at time : 190 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 175
+run all
+Stopped at time : 192 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 175
+run all
+Stopped at time : 194 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 175
+run all
+Stopped at time : 196 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 175
+run all
+Stopped at time : 198 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 175
+run all
+Stopped at time : 200 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 175
+run all
+Stopped at time : 202 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 175
+run all
+Stopped at time : 204 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 175
+run all
+Stopped at time : 206 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 175
+run all
+Stopped at time : 208 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 175
+run all
+Stopped at time : 210 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 175
+run all
+Stopped at time : 212 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 175
+run all
+Stopped at time : 214 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 175
+run all
+Stopped at time : 216 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 175
+run all
+Stopped at time : 218 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 175
+run all
+Stopped at time : 220 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 175
+run all
+Stopped at time : 222 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 175
+run all
+Stopped at time : 224 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 175
+run all
+Stopped at time : 226 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 175
+run all
+Stopped at time : 228 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 175
+run all
+Stopped at time : 230 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 175
+run all
+Stopped at time : 232 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 175
+run all
+Stopped at time : 234 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 175
+run all
+Stopped at time : 236 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 175
+run all
+Stopped at time : 238 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 175
+run all
+Stopped at time : 240 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 175
+run all
+Stopped at time : 242 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 175
+run all
+Stopped at time : 244 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 175
+run all
+Stopped at time : 246 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 175
+run all
+Stopped at time : 248 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 175
+run all
+Stopped at time : 250 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 175
+run all
+Stopped at time : 252 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 175
+run all
+Stopped at time : 254 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 175
+run all
+Stopped at time : 256 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 175
+run all
+Stopped at time : 258 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 175
+run all
+Stopped at time : 260 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 175
+run all
+Stopped at time : 262 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 175
+run all
+Stopped at time : 264 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 175
+run all
+Stopped at time : 266 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 175
+run all
+Stopped at time : 268 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 175
+run all
+Stopped at time : 270 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 175
+run all
+Stopped at time : 272 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 175
+run all
+Stopped at time : 274 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 175
+run all
+Stopped at time : 276 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 175
+run all
+Stopped at time : 278 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 175
+run all
+Stopped at time : 280 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 175
+run all
+Stopped at time : 282 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 175
+run all
+Stopped at time : 284 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 175
+run all
+Stopped at time : 286 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 175
+run all
+Stopped at time : 288 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 175
+run all
+Stopped at time : 290 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 175
+run all
+Stopped at time : 292 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 175
+add_bp {C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v} 110
+run all
+Stopped at time : 294 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 175
+run all
+Stopped at time : 296 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 175
+remove_bps -file {C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v} -line 175
+remove_bps -file {C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v} -line 110
+add_bp {C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v} 93
+run all
+Stopped at time : 298 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 93
+run all
+Stopped at time : 300 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 93
+run all
+Stopped at time : 302 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 93
+run all
+Stopped at time : 304 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 93
+run all
+Stopped at time : 306 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 93
+run all
+Stopped at time : 308 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 93
+run all
+Stopped at time : 310 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 93
+run all
+Stopped at time : 312 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 93
+run all
+Stopped at time : 314 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 93
+run all
+Stopped at time : 316 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 93
+run all
+Stopped at time : 318 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 93
+run all
+Stopped at time : 320 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 93
+run all
+Stopped at time : 322 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 93
+run all
+Stopped at time : 324 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 93
+run all
+Stopped at time : 326 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 93
+run all
+Stopped at time : 328 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 93
+run all
+Stopped at time : 330 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 93
+run all
+Stopped at time : 332 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 93
+run all
+Stopped at time : 334 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 93
+run all
+Stopped at time : 336 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 93
+run all
+Stopped at time : 338 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 93
+run all
+Stopped at time : 340 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 93
+run all
+Stopped at time : 342 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 93
+run all
+Stopped at time : 344 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 93
+run all
+Stopped at time : 346 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 93
+run all
+Stopped at time : 348 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 93
+run all
+Stopped at time : 350 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 93
+run all
+Stopped at time : 352 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 93
+run all
+Stopped at time : 354 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 93
+run all
+Stopped at time : 356 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 93
+run all
+Stopped at time : 358 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 93
+run all
+Stopped at time : 360 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 93
+run all
+Stopped at time : 362 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 93
+run all
+Stopped at time : 364 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 93
+run all
+Stopped at time : 366 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 93
+run all
+Stopped at time : 368 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 93
+run all
+Stopped at time : 370 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 93
+run all
+Stopped at time : 372 ns : File "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" Line 93
+remove_bps -file {C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v} -line 93
+relaunch_sim
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/devspace/school/Micronaut/jw_display_code/zedboard.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2018.1/data/xsim/ip/xsim_ip.ini' copied to run dir:'C:/devspace/school/Micronaut/jw_display_code/zedboard.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'display_test' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/devspace/school/Micronaut/jw_display_code/zedboard.sim/sim_1/behav/xsim/blk_mem_gen_0.mif'
+INFO: [SIM-utils-43] Exported 'C:/devspace/school/Micronaut/jw_display_code/zedboard.sim/sim_1/behav/xsim/background.coe'
+INFO: [SIM-utils-43] Exported 'C:/devspace/school/Micronaut/jw_display_code/zedboard.sim/sim_1/behav/xsim/blk_mem_gen_1.mif'
+INFO: [SIM-utils-43] Exported 'C:/devspace/school/Micronaut/jw_display_code/zedboard.sim/sim_1/behav/xsim/bluenocrossing.coe'
+INFO: [SIM-utils-43] Exported 'C:/devspace/school/Micronaut/jw_display_code/zedboard.sim/sim_1/behav/xsim/blk_mem_logo.mif'
+INFO: [SIM-utils-43] Exported 'C:/devspace/school/Micronaut/jw_display_code/zedboard.sim/sim_1/behav/xsim/cidarlogo.coe'
+INFO: [SIM-utils-43] Exported 'C:/devspace/school/Micronaut/jw_display_code/zedboard.sim/sim_1/behav/xsim/redcrossing.coe'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/devspace/school/Micronaut/jw_display_code/zedboard.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj display_test_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/disp_char.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module disp_char
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module display
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sim_1/new/display_test.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module display_test
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/devspace/school/Micronaut/jw_display_code/zedboard.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/devspace/school/Micronaut/jw_display_code/zedboard.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.1
+Copyright 1986-1999, 2001-2017 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.1/bin/unwrapped/win64.o/xelab.exe -wto 617a0dd54e954085815eba52c3288dc9 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot display_test_behav xil_defaultlib.display_test xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-278] actual bit length 4 differs from formal bit length 3 for port frameSel [C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sim_1/new/display_test.v:52]
+WARNING: [VRFC 10-278] actual bit length 5 differs from formal bit length 6 for port char_row [C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v:72]
+WARNING: [VRFC 10-278] actual bit length 5 differs from formal bit length 6 for port char_col [C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v:73]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.disp_char
+Compiling module xil_defaultlib.display
+Compiling module xil_defaultlib.display_test
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot display_test_behav
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:05 . Memory (MB): peak = 1795.008 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '5' seconds
+launch_simulation: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 1795.008 ; gain = 0.000
+Vivado Simulator 2018.1
+Time resolution is 1 ps
+ERROR: [Labtools 27-1832] create_wave_config not a supported tcl command in labtools hardware mode. Default wave configurations are automatically created when triggering an ILA core.
+relaunch_sim: Time (s): cpu = 00:00:02 ; elapsed = 00:00:14 . Memory (MB): peak = 1795.773 ; gain = 0.766
+relaunch_sim
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/devspace/school/Micronaut/jw_display_code/zedboard.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2018.1/data/xsim/ip/xsim_ip.ini' copied to run dir:'C:/devspace/school/Micronaut/jw_display_code/zedboard.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'display_test' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/devspace/school/Micronaut/jw_display_code/zedboard.sim/sim_1/behav/xsim/blk_mem_gen_0.mif'
+INFO: [SIM-utils-43] Exported 'C:/devspace/school/Micronaut/jw_display_code/zedboard.sim/sim_1/behav/xsim/background.coe'
+INFO: [SIM-utils-43] Exported 'C:/devspace/school/Micronaut/jw_display_code/zedboard.sim/sim_1/behav/xsim/blk_mem_gen_1.mif'
+INFO: [SIM-utils-43] Exported 'C:/devspace/school/Micronaut/jw_display_code/zedboard.sim/sim_1/behav/xsim/bluenocrossing.coe'
+INFO: [SIM-utils-43] Exported 'C:/devspace/school/Micronaut/jw_display_code/zedboard.sim/sim_1/behav/xsim/blk_mem_logo.mif'
+INFO: [SIM-utils-43] Exported 'C:/devspace/school/Micronaut/jw_display_code/zedboard.sim/sim_1/behav/xsim/cidarlogo.coe'
+INFO: [SIM-utils-43] Exported 'C:/devspace/school/Micronaut/jw_display_code/zedboard.sim/sim_1/behav/xsim/redcrossing.coe'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/devspace/school/Micronaut/jw_display_code/zedboard.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj display_test_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/devspace/school/Micronaut/jw_display_code/zedboard.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/devspace/school/Micronaut/jw_display_code/zedboard.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.1
+Copyright 1986-1999, 2001-2017 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.1/bin/unwrapped/win64.o/xelab.exe -wto 617a0dd54e954085815eba52c3288dc9 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot display_test_behav xil_defaultlib.display_test xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-278] actual bit length 4 differs from formal bit length 3 for port frameSel [C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sim_1/new/display_test.v:52]
+WARNING: [VRFC 10-278] actual bit length 5 differs from formal bit length 6 for port char_row [C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v:72]
+WARNING: [VRFC 10-278] actual bit length 5 differs from formal bit length 6 for port char_col [C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v:73]
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '4' seconds
+launch_simulation: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 1798.227 ; gain = 0.000
+Vivado Simulator 2018.1
+Time resolution is 1 ps
+ERROR: [Labtools 27-1832] create_wave_config not a supported tcl command in labtools hardware mode. Default wave configurations are automatically created when triggering an ILA core.
+relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:13 . Memory (MB): peak = 1798.227 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/devspace/school/Micronaut/jw_display_code/zedboard.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2018.1/data/xsim/ip/xsim_ip.ini' copied to run dir:'C:/devspace/school/Micronaut/jw_display_code/zedboard.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'display_test' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/devspace/school/Micronaut/jw_display_code/zedboard.sim/sim_1/behav/xsim/blk_mem_gen_0.mif'
+INFO: [SIM-utils-43] Exported 'C:/devspace/school/Micronaut/jw_display_code/zedboard.sim/sim_1/behav/xsim/background.coe'
+INFO: [SIM-utils-43] Exported 'C:/devspace/school/Micronaut/jw_display_code/zedboard.sim/sim_1/behav/xsim/blk_mem_gen_1.mif'
+INFO: [SIM-utils-43] Exported 'C:/devspace/school/Micronaut/jw_display_code/zedboard.sim/sim_1/behav/xsim/bluenocrossing.coe'
+INFO: [SIM-utils-43] Exported 'C:/devspace/school/Micronaut/jw_display_code/zedboard.sim/sim_1/behav/xsim/blk_mem_logo.mif'
+INFO: [SIM-utils-43] Exported 'C:/devspace/school/Micronaut/jw_display_code/zedboard.sim/sim_1/behav/xsim/cidarlogo.coe'
+INFO: [SIM-utils-43] Exported 'C:/devspace/school/Micronaut/jw_display_code/zedboard.sim/sim_1/behav/xsim/redcrossing.coe'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/devspace/school/Micronaut/jw_display_code/zedboard.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj display_test_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/devspace/school/Micronaut/jw_display_code/zedboard.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.1
+Copyright 1986-1999, 2001-2017 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.1/bin/unwrapped/win64.o/xelab.exe -wto 617a0dd54e954085815eba52c3288dc9 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot display_test_behav xil_defaultlib.display_test xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-278] actual bit length 4 differs from formal bit length 3 for port frameSel [C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sim_1/new/display_test.v:52]
+WARNING: [VRFC 10-278] actual bit length 5 differs from formal bit length 6 for port char_row [C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v:72]
+WARNING: [VRFC 10-278] actual bit length 5 differs from formal bit length 6 for port char_col [C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/display.v:73]
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '4' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/devspace/school/Micronaut/jw_display_code/zedboard.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "display_test_behav -key {Behavioral:sim_1:Functional:display_test} -tclbatch {display_test.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.1
+Time resolution is 1 ps
+source display_test.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+WARNING: File char.list referenced on C:/devspace/school/Micronaut/jw_display_code/zedboard.srcs/sources_1/new/disp_char.v at line 64 cannot be opened for reading. Please ensure that this file is available in the current working directory.
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'display_test_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:12 . Memory (MB): peak = 1798.227 ; gain = 0.000
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/devspace/school/Micronaut/jw_display_code/zedboard.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Mon Apr 30 18:08:46 2018] Launched synth_1...
+Run output will be captured here: C:/devspace/school/Micronaut/jw_display_code/zedboard.runs/synth_1/runme.log
+[Mon Apr 30 18:08:46 2018] Launched impl_1...
+Run output will be captured here: C:/devspace/school/Micronaut/jw_display_code/zedboard.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {C:/devspace/school/Micronaut/jw_display_code/zedboard.runs/impl_1/main.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+INFO: [Labtools 27-1434] Device xc7z020 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+exit
+INFO: [Common 17-206] Exiting Vivado at Mon Apr 30 18:14:05 2018...
